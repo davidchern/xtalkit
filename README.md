@@ -28,7 +28,7 @@ You will see the colored result of sequence alignment. Enjoy!
 
 ## paref.py - parallel model refinement using phenix.refine
 
-A toolkit for running several jobs of `phenix.refine` in parallel, especially useful for simulated annealing. It can automatically pick up the best result amongst all the jobs (based on `R-free` values).
+A toolkit for running several jobs of `phenix.refine` in parallel, especially useful when doing simulated annealing. It can automatically pick up the best result amongst all the jobs (based on `R-free` values).
 
 ### Requirement
 
@@ -42,12 +42,12 @@ First put `paref.py` into a convenient path, e.g. `/usr/local/bin`, then run
 chmod +x /usr/local/bin/paref.py
 ```
 
-Prepare a `param.def` file for running of phenix.refine, and just run as following suggestion,
+Prepare a `param.def` file for the running of `phenix.refine`, and just run as following,
 
 ```shell
 paref.py [options] param.{def,eff}
 
-Options:\n" \
+Options:
   --jobs=          | -j : number of jobs, default is 4.
   --make-all-seeds | -a : make all seeds, default is to keep the first one.
   --help           | -h : show this help information.
