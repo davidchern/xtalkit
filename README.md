@@ -8,7 +8,7 @@ Run on Python 2.7 under Linux and Mac OS (Windows not supported), probably on Py
 
 ### Requirement
 
-You have to have CCP4 installed, which includes a copy of `clustalw2`.
+You need to have CCP4 installed, which includes a copy of `clustalw2`.
 
 ### Usage
 
