@@ -4,7 +4,7 @@
 
 A convenient toolkit for directly coloring the output of `clustalw2` (.aln file) on console, so you don't have to use a website for visualizing the result of sequence alignment.
 
-Run on Python 2.7, probably on Python 3.x also, yet not tested.
+Run on Python 2.7 under Linux and Mac OS (Windows not supported), probably on Python 3.x also, yet not tested.
 
 ### Requirement
 
