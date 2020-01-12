@@ -30,7 +30,7 @@ def clustalw_color(aln_file=''):
         prev_seg = lines[n - 1][0].rstrip() if n > 0 else lines[0][0].rstrip()
         numbered_ln = " " * nwidth + \
                       "".join(["%10s" %(10 * i + n * len(prev_seg[nwidth:]))
-                               for i in xrange(1, len(seg[0][nwidth:])//10 + 1)])
+                               for i in range(1, len(seg[0][nwidth:])//10 + 1)])
 
         if seg[-1].startswith(' '):
             seg[-1] = seg[-1] + ' ' * (len(seg[0]) - len(seg[-1]))
@@ -39,7 +39,7 @@ def clustalw_color(aln_file=''):
             colored_seg = [numbered_ln]
             for ln in seg:
                 colored_seq = ln[:nwidth]
-                for i in xrange(nwidth, len(ln)):
+                for i in range(nwidth, len(ln)):
                     color = COLOR_SCHEME.get(aln_info[i])
                     colored_seq += color % (ln[i]) if color else ln[i]
                 colored_seg.append(colored_seq)
@@ -57,8 +57,8 @@ def run_clustalw(fasta=''):
     if not fasta:
         return -1
 
-    clustalw = os.environ.get('CCP4', '') + '/libexec/clustalw2'
-    if not os.path.exists(clustalw):
+    clustalw = os.path.join(os.environ.get('CCP4', ''), '/libexec/clustalw2')
+    if not os.path.isfile(clustalw):
         return 1
 
     proc = subprocess.Popen([clustalw, fasta], stdout=open('/dev/null'))
