@@ -28,7 +28,7 @@ You will see the colored result of sequence alignment. Enjoy!
 
 ## paref.py - parallel model refinement using phenix.refine
 
-A toolkit for running several jobs of `phenix.refine` in parallel, especially useful when doing simulated annealing. It can automatically pick up the best result amongst all the jobs (based on `R-free` values).
+A toolkit for running multiple jobs of `phenix.refine` in parallel, especially useful when doing simulated annealing. It can automatically pick up the best result amongst all the jobs (based on `R-free` values).
 
 ### Requirement
 
